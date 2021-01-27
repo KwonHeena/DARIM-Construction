@@ -1,0 +1,68 @@
+<footer>
+	<div class="footer-info">
+		<div class="container">
+			<div class="col-sm-3">
+				<img src="/public/img/logo/logo-footer.png" class="img-responsive" alt="LOGO">
+			</div>
+			<div class="col-sm-9">
+				<ul>
+					<li class="name">다림건설(주)</li>
+					<li class="ceo">대표자명 : 이계영</li>
+					<li class="business-number">사업자등록번호 : 129-81-24068</li>
+					<div class="clearfix"></div>
+					<li class="addr">경기도 성남시 분당구 장미로 86, 6층 (야탑동, 이코노샤르망)</li>
+					<li class="tel">대표번호 : 031-725-6700</li>
+					<li class="fax">팩스번호 : 031-709-5725</li>
+					<li class="email">이메일 : drcc00@daum.net</li>
+					<div class="clearfix"></div>
+					<li class="copy">©DARIM Construction Co., Ltd. All rights reserved.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1600067222054",
+		"key" : "22zp3",
+		"mapWidth" : "100%",
+		"mapHeight" : "300"
+	}).render();
+</script>
+<script charset="UTF-8">
+	new daum.roughmap.Lander({
+		"timestamp" : "1600067288303",
+		"key" : "22zp8",
+		"mapWidth" : "100%",
+		"mapHeight" : "300"
+	}).render();
+</script>
+
+<script>
+$(document).ready(function() {
+	// Top 버튼 태그 추가
+	$('#site').append('<div class="btn-top"><i class="fas fa-chevron-up"></i><div>');
+
+	$(window).scroll( function() {
+	// Top 버튼 보이기/안보이기 (어느정도 스크롤링 됐을 때 보이도록 함)
+	if ($(this).scrollTop() > 200) $('.btn-top').fadeIn();
+	else $('.btn-top').fadeOut();
+	} );
+
+	// 위치 상단으로 이동 (부드럽게 스크롤링)
+	$('.btn-top').click( function() {
+	$( 'html, body' ).animate( { scrollTop : 0 }, 400 );
+	return false;
+	} );
+
+	//게시판・주문폼
+	if ($(location).attr('href').indexOf('board') != -1 || $(location).attr('href').indexOf('form') != -1) {
+		$('.board_wrapper, .search_wrap, .pagination_wrap').appendTo('.board-area').css('visibility', 'visible');
+	}
+
+	$('.member_wrapper').addClass('container');
+});
+</script>
